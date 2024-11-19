@@ -36,15 +36,55 @@
 
 #Condition if else
 
-read -p "Enter you age: " age
+# read -p "Enter you age: " age
 
-if [ $age -ge 35 ]; then
-    echo "বাছা তুমি বুইরা"
+# if [ $age -ge 35 ]; then
+#     echo "বাছা তুমি বুইরা"
 
-# To use || or && you need to enclose the condition it in [[]]
-elif [[ $age -ge 18 && $age -le 34 ]]; then
-    echo "বাছা তুমি জোয়ান"
+# # To use || or && you need to enclose the condition it in [[]]
+# elif [[ $age -ge 18 && $age -le 34 ]]; then
+#     echo "বাছা তুমি জোয়ান"
 
+# else
+#     echo "বাছা তুমি বাছুর"
+# fi
+
+# Check if a file it in the directory use -f
+if [ -f file.txt ]; then
+    echo "File found"
 else
-    echo "বাছা তুমি বাছুর"
+    echo "No file found"
+fi
+
+# Check if a directory it in the directory use -d
+if [ -d ./.git ]; then
+    echo "Directory found"
+else
+    echo "No directory found"
+fi
+
+# Check if file or directory it in the directory use -e
+
+if [ -e file.txt ]; then
+    echo "Directory found"
+else
+    echo "No file or directory found"
+fi
+
+# -x to check if file is executable
+
+if [ -x ./Bash/firstBash.sh ]; then
+    echo "User has permission to execute the file"
+else
+    echo "Permission denied"
+
+fi
+
+# -s to check if a file is empty
+
+if [ -s file.txt ]; then
+    echo "File is not empty"
+else
+    echo "File is empty"
+
 fi
