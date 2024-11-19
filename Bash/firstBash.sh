@@ -88,3 +88,32 @@ else
     echo "File is empty"
 
 fi
+
+# -s to check if a file or directory is empty
+
+if [ -s file.txt ]; then
+    echo "File is not empty"
+else
+    echo "File is empty"
+
+fi
+
+# -z to check if a variable is empty
+
+if [ -z fullname ]; then
+    echo "The variable is empty"
+else
+    echo "The variable is not empty"
+
+fi
+
+# check and compare file build time with -ot
+
+if [ file.txt -ot newfile.txt ]; then
+    echo "file.txt is older"
+else
+    echo "newfile.txt is older"
+
+fi
+
+# to match with regex the condition will be [[ text =~ regexPatern ]]
