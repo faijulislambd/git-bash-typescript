@@ -20,15 +20,17 @@ else
 
         #Doing action based on status
 
-        if [[ $gitStatus || ${grep -q '^??'} || ${grep -q '^M'} ]]; then
+        if echo "$gitStatus" | grep -q '^??' || echo "$gitStatus" | grep -q '^M'; then
             echo "There are untracked and modified files."
              # Add or Track Files To Git
             git add .
             # Commit The Tracked Files
-            read -p "Enter a commit. If not commit entered than a default commit will be added: $/n" firstCommit
+            read -p "Enter a commit. If not commit entered than a default commit will be added: " firstCommit
             git commit -m ${firstCommit:-"First Commit"}
+            exit 0
         else
             echo "Files & Directories are up to date"
+            exit 0
         fi
 
     else
@@ -43,7 +45,6 @@ else
         read -p "Enter a commit. If not commit entered than a default commit will be added" firstCommit
 
         git commit -m ${firstCommit:-"First Commit" }
-
+        exit 0
     fi
-exit 0
 fi
