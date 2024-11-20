@@ -9,4 +9,4 @@ You can run the script by typing the following command
 ```
 ./initializeGit.sh
 ```
-After runing provide filepath of the directory you want to setup git.
+After running provide filepath of the directory you want to setup git.
