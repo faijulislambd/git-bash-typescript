@@ -30,24 +30,7 @@ else
             git commit -m "${firstCommit:-"First Commit"}"
             exit 0
         fi
-        if echo "$gitStatus" | grep -q '^??'; then
-            echo "There are untracked files."
-             # Add or Track Files To Git
-            git add .
-            # Commit The Tracked Files
-            read -p "Enter a commit. If not commit entered than a default commit will be added: " firstCommit
-            git commit -m "${firstCommit:-"Untracked files committed"}"
-            exit 0
-        fi
-        if echo "$gitStatus" | grep -q '^M'; then
-            echo "There are modified files."
-             # Add or Track Files To Git
-            git add .
-            # Commit The Tracked Files
-            read -p "Enter a commit. If not commit entered than a default commit will be added: " firstCommit
-            git commit -m "${firstCommit:-"Modified files committed"}"
-            exit 0
-        fi
+
         echo "Files & Directories are up to date."
         exit 0
 
