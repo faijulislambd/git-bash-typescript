@@ -9,4 +9,12 @@ You can run the script by typing the following command
 ```
 ./initializeGit.sh
 ```
-After running provide filepath of the directory you want to setup git.
+>_After running provide filepath of the directory you want to setup git._
+
+The other script in the `Bash` folder name `sshAgentAdd.sh` is used to add you ssh key to agent
+You can run the script by typing the following command
+You can run the script by typing the following command
+```
+./sshAgentAdd.sh
+```
+>_There should be no spaces in ssh key name_
