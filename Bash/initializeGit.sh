@@ -21,7 +21,6 @@ else
 
 
         #Doing action based on status
-
         if echo "$gitStatus" | grep -q '^??' || echo $gitStatus | grep -q '^M'; then
             echo "There are untracked and modified files."
              # Add or Track Files To Git
