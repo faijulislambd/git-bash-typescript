@@ -12,6 +12,7 @@ if [ -z ${directoryPath} ];then
 else
     echo "Git is being initialize in ${directoryPath}"
     if [ -d ./.git ]; then
+        cd "$directoryPath" || { echo "Cannot change to directory $directoryPath"; exit 1; }
         echo "Git is already initialized. Checking status"
 
         # Checking Git Status
