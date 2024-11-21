@@ -16,6 +16,6 @@ else
     # Check if git connection successfull
     ssh -T git@github.com
     # Push after agent is sure
-    git push origin master
+    git push origin master --force-with-lease
     exit 0
 fi
