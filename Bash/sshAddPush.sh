@@ -25,5 +25,6 @@ wantForce="$1"
 if [ wantForce=='f' ]; then
 	git push origin master --force-with-lease
 	exit 0
+fi
 git push origin master
 exit 0
